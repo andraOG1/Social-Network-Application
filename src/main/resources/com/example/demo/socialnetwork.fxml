@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="488.0" prefWidth="664.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.EditController">
+  <tabs>
+    <Tab text="users">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="39.0" layoutY="186.0" mnemonicParsing="false" onAction="#handleAddUser" prefHeight="25.0" prefWidth="59.0" text="ADD" />
+                  <Button layoutX="39.0" layoutY="222.0" mnemonicParsing="false" onAction="#handleDeleteUser" prefHeight="25.0" prefWidth="61.0" text="DELETE" />
+                  <Button layoutX="36.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleUpdateUser" text="UPDATE" />
+                  <Button layoutX="35.0" layoutY="297.0" mnemonicParsing="false" onAction="#handleFindUser" prefHeight="25.0" prefWidth="64.0" text="FIND" />
+                  <TextField fx:id="TextID" layoutX="41.0" layoutY="22.0" promptText="ID" />
+                  <TextField fx:id="TextFN" layoutX="41.0" layoutY="60.0" promptText="FIRST NAME" />
+                  <TextField fx:id="TextLN" layoutX="41.0" layoutY="97.0" promptText="LAST NAME" />
+                  <TableView fx:id="tableView" layoutX="276.0" layoutY="34.0" onMousePressed="#handleSelectUser" prefHeight="258.0" prefWidth="364.0">
+                    <columns>
+                      <TableColumn fx:id="tableColumnID" prefWidth="45.0" text="ID" />
+                      <TableColumn fx:id="tableColumnFN" prefWidth="108.0" text="FIRST NAME" />
+                        <TableColumn fx:id="tableColumnLN" prefWidth="103.0" text="LAST NAME" />
+                        <TableColumn fx:id="tableColumnParola" prefWidth="112.0" text="Parola" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="ExitButton" layoutX="131.0" layoutY="297.0" mnemonicParsing="false" onAction="#handleExitButton" text="EXIT" />
+                  <Button fx:id="Inainte" layoutX="274.0" layoutY="310.0" mnemonicParsing="false" onAction="#onPrevious" text="Inainte" />
+                  <Button fx:id="Urmator" layoutX="562.0" layoutY="310.0" mnemonicParsing="false" onAction="#onNext" text="Urmator" />
+                  <TextField fx:id="PePagina" layoutX="41.0" layoutY="394.0" text="3" />
+                  <Label layoutX="44.0" layoutY="367.0" text="Cati oameni sa fie pe lista?">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="OK" layoutX="219.0" layoutY="394.0" mnemonicParsing="false" onAction="#initializeTableDataUser" text="OK" />
+                  <TextField fx:id="PAROLA" layoutX="41.0" layoutY="132.0" promptText="PAROLA" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>

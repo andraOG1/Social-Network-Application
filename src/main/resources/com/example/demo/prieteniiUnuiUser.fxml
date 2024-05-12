@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<TabPane tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.CereriPrieteniiController">
+   <tabs>
+      <Tab text="add_friends">
+         <content>
+            <AnchorPane prefHeight="480.0" prefWidth="839.0">
+               <children>
+                  <TableView fx:id="tabelaPrieteni" layoutX="260.0" layoutY="39.0" prefHeight="216.0" prefWidth="248.0">
+                    <columns>
+                      <TableColumn fx:id="tableColumnFN" prefWidth="125.0" text="First Name " />
+                      <TableColumn fx:id="tableColumnLN" prefWidth="122.0" text="Last Name" />
+                    </columns>
+                  </TableView>
+                  <TextField fx:id="TextPrenume" layoutX="20.0" layoutY="39.0" promptText="prenumeUT" />
+                  <TextField fx:id="TextNume" layoutX="20.0" layoutY="73.0" promptText="numeUT" />
+                  <Label layoutX="14.0" layoutY="14.0" text="Numele utilizatorului" underline="true">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="260.0" layoutY="14.0" text="Prietenii lui" underline="true">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tabelaRequesturi" layoutX="558.0" layoutY="39.0" prefHeight="216.0" prefWidth="224.0">
+                    <columns>
+                      <TableColumn fx:id="tableColumnFN2" prefWidth="115.0" text="First NAME" />
+                      <TableColumn fx:id="tableColumnLN2" prefWidth="108.0" text="Last NAME" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="567.0" layoutY="14.0" text="Cereri de prietenie" underline="true">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="acceptarePrieten" layoutX="558.0" layoutY="282.0" mnemonicParsing="false" onAction="#acceptPrietenie" style="-fx-background-color: #ADD8E6;" text="Accept">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="refuzarePrieten" layoutX="711.0" layoutY="282.0" mnemonicParsing="false" onAction="#refuzPrietenie" style="-fx-background-color: #ADD8E6;" text="Refuz">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="IesireBtn" layoutX="23.0" layoutY="333.0" mnemonicParsing="false" onAction="#Iesire" text="EXIT">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="IDut" layoutX="46.0" layoutY="105.0" prefHeight="25.0" prefWidth="45.0" promptText="id" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="105.0" prefHeight="25.0" prefWidth="36.0" text="ID" underline="true">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="add" layoutX="15.0" layoutY="278.0" mnemonicParsing="false" onAction="#adaugarePrieten" text="ADD FRIEND" textFill="#792828">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="15.0" layoutY="170.0" text="Pers de adaugat" underline="true">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="text_fn" layoutX="17.0" layoutY="205.0" promptText="First name" />
+                  <TextField fx:id="text_ln" layoutX="17.0" layoutY="243.0" promptText="Last name" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="CHAT">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="480.0" prefWidth="839.0">
+               <children>
+                  <TableView fx:id="tabelaFriendsOfUser" layoutX="26.0" layoutY="72.0" onMousePressed="#selectareMaiMulti" prefHeight="230.0" prefWidth="231.0">
+                    <columns>
+                      <TableColumn fx:id="tableColumnFN3" prefWidth="112.0" text="FIRST NAME" />
+                      <TableColumn fx:id="tableColumnLN3" prefWidth="109.0" text="LAST NAME" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="32.0" layoutY="27.0" text="Prietenii mei" underline="true">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="341.0" layoutY="15.0" text="Messages:" underline="true">
+                     <font>
+                        <Font name="System Bold" size="33.0" />
+                     </font>
+                  </Label>
+                  <ListView fx:id="listOfMessages" layoutX="341.0" layoutY="74.0" prefHeight="229.0" prefWidth="299.0" />
+                  <TextField fx:id="message" layoutX="341.0" layoutY="311.0" prefHeight="47.0" prefWidth="237.0" />
+                  <Button fx:id="trmMesaj" layoutX="592.0" layoutY="312.0" mnemonicParsing="false" onAction="#trimitereMesaj" prefHeight="45.0" prefWidth="55.0" text="SEND" />
+               </children></AnchorPane>
+         </content>
+      </Tab>
+   </tabs>
+</TabPane>
